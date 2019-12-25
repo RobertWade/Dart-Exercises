@@ -1,6 +1,5 @@
 class ResistorColorDuo {
-  // Put your code here
-  static const List<String> _colorMap = [
+  static const List<String> _colorList = [
     'black',
     'brown',
     'red',
@@ -13,10 +12,12 @@ class ResistorColorDuo {
     'white'
   ];
 
-  //Map the Array of colors to a new array with all the indexes as strings, join them to one string and parse them into an integer
   int value(List<String> colors) {
+    //Parse the String into an Integer
     return int.parse(colors
-        .map((String color) => _colorMap.indexOf(color).toString())
+        //Create array with all indexes turned into Strings
+        .map((String color) => _colorList.indexOf(color).toString())
+        //Join the array to one String
         .join(''));
   }
 }
